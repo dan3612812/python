@@ -2,6 +2,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
+himitsu
+download
+build
+opencc-python-master
+phantomjs-2.1.1-windows
+temp
+*.log
+
 
 # C extensions
 *.so
