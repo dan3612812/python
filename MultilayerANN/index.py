@@ -59,31 +59,13 @@ while(1):
     elist.append(sume)
     if(sume <= 0.001):
         break
-'''
-for i in range(0, len(elist)):
-    plt.plot(i, elist[i], 'ro')
 
-# plt.axis([0,20000,0.0001,1])
-plt.show()
-'''
-'''
-for i in range(0,2000):
-    plt.scatter(i,elist[i])
-
-plt.show()
-'''
-'''
-for i in range(0,len(elist)):
-    #print(i,round(elist[i],4))
-    plt.plot(1,elist[i])
-plt.show()
-'''
-
-print(w13, w14, w23, w24, w35, w45, th3, th4, th5)
+print("w13:",w13," w14:", w14," w23:", w23," w24:", w24," w35:", w35," w45:", w45," th3:",th3," th4:", th4," th5:" , th5," 疊帶:" ,era,"次")
 #print("ERA:", era)
-# 輸出計算
+# 輸出計算實際帶入
 in1, in2 = 1,1
+print("實際帶入測試x=",in1," y=",in2)
 an3 = 1 / (1 + math.exp(in1 * w13 + in2 * w23 - th3))
 an4 = 1 / (1 + math.exp(in1 * w14 + in2 * w24 - th4))
 an5 = 1 / (1 + math.exp(an3 * w35 + an4 * w45 - th5))
-print("ANS:",an5)
+print("ANS=",an5,"取四捨五入=",round(an5))
