@@ -1,7 +1,6 @@
 #!python3
 import math
-from matplotlib.lines import Line2D
-import matplotlib.pyplot as plt
+import os
 # 宣告輸入,各路徑
 a = 0.1  # 學習率
 x1, x2 = 1, 1
@@ -74,3 +73,4 @@ calc(0, 0)
 calc(0, 1)
 calc(1, 0)
 calc(1, 1)
+os.system("pause")
