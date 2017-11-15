@@ -10,7 +10,6 @@ w23, w24 = 0.4, 1
 w35, w45 = -1.2, 1.1
 th3, th4, th5 = 0.8, -0.1, 0.3
 era = 0  # 疊代次數
-elist = []
 # 訓練權重
 # 重後方輸入
 # 誤差梯度
@@ -56,16 +55,22 @@ def fun(x1, x2, yd5):
 
 while(1):
     sume = round(fun(1, 1, 0) + fun(1, 0, 1) + fun(0, 1, 1) + fun(1, 1, 0), 4)
-    elist.append(sume)
     if(sume <= 0.001):
         break
 
-print("w13:",w13," w14:", w14," w23:", w23," w24:", w24," w35:", w35," w45:", w45," th3:",th3," th4:", th4," th5:" , th5," 疊帶:" ,era,"次")
+print("w13:", w13, " w14:", w14, " w23:", w23, " w24:", w24, " w35:", w35,
+      " w45:", w45, " th3:", th3, " th4:", th4, " th5:", th5, " 疊帶:", era, "次")
 #print("ERA:", era)
-# 輸出計算實際帶入
-in1, in2 = 1,1
-print("實際帶入測試x=",in1," y=",in2)
-an3 = 1 / (1 + math.exp(in1 * w13 + in2 * w23 - th3))
-an4 = 1 / (1 + math.exp(in1 * w14 + in2 * w24 - th4))
-an5 = 1 / (1 + math.exp(an3 * w35 + an4 * w45 - th5))
-print("ANS=",an5,"取四捨五入=",round(an5))
+
+def calc(in1, in2):
+    # 輸出計算實際帶入
+    print("實際帶入測試x=", in1, " y=", in2)
+    an3 = 1 / (1 + math.exp(in1 * w13 + in2 * w23 - th3))
+    an4 = 1 / (1 + math.exp(in1 * w14 + in2 * w24 - th4))
+    an5 = 1 / (1 + math.exp(an3 * w35 + an4 * w45 - th5))
+    print("ANS=", an5, "取四捨五入=", round(an5))
+
+calc(0, 0)
+calc(0, 1)
+calc(1, 0)
+calc(1, 1)
