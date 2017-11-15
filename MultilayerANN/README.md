@@ -1,0 +1,1 @@
+106 ncut AI homework ANN by BYS
