@@ -2,6 +2,7 @@
 from matplotlib.lines import Line2D
 import matplotlib.pyplot as plt
 import numpy as np
+#測試
 
 plt.subplot(441)
 plt.plot([0,0.2,0.5,1],[1,1,0,0]) #a1
