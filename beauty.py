@@ -22,6 +22,7 @@ def down_img(articles):
         temp = art.text.replace(':', '') #名子
         temp =temp.replace(" ","") #空白
         temp = temp.replace('/','_')#時間
+        #測試測是
         if(checkstr(temp)==-1):
             if not(os.path.isdir(os.path.join('download', temp))):  # 在download資料夾找尋 art.text
                 os.makedirs(os.path.join('download', temp))
