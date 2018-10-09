@@ -5,6 +5,7 @@ import pyautogui as auto  # 滑鼠鍵盤控制
 auto.PAUSE = 0.25
 auto.FAILSAFE = True  # 當滑鼠移到最左上角 強制退出python
 width, height = auto.size()  # 取得螢幕解析度size
+# 回commit
 # 點開漂流 35 970
 ####------開啟儲放帳密檔案-------####
 
